@@ -1,0 +1,212 @@
+.game_parent {
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;height: 100%;
+}
+.count_item, .time_item  {
+  position: absolute;
+  width: 100px;height: 100px;
+}
+.count_item {
+  left: 10%;
+}
+.count_number {
+  position: absolute;
+  left: 50%;top: 60%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px black;
+}
+.time_item {
+  right: 10%;
+}
+.time_wood {
+  position: absolute;
+  left: 50%;top: 60%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px black;
+}
+.count_item img, .time_item img {
+  width: 100%;
+}
+/* .game_parent img:nth-child(2){
+  position: absolute;
+  right: 0;
+  width: 100px;height: 100px;
+
+} */
+.Game_wrapper {
+  position: absolute;
+  top:59%;left: 50%;
+    height: 455px;width: 455px;
+    transform: translate(-50%, -50%);
+    display: flex;align-items: center;justify-content: center;
+    background: transparent;
+    /* background-color: #ccc; */
+    padding: 30px ;
+    /* width: 36%; */
+  }
+  .Game_wrapper > img {
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+  }
+  .row>*{
+      padding: 0;
+  }
+
+  .game_count {
+    position: absolute;
+    top: 54.9%;left: 47.4%;
+    transform: translate(-50%, -50%);
+    /* display: flex;justify-content: space-around;align-items: center; */
+    width: 390px;
+    height: 100%;
+    /* background: #ccc; */
+  }
+  .game_count .row {
+    position: absolute;
+  }
+  /* .game_count .row > img {
+    position: absolute;
+    top: 0;left: 0;
+    width: 120%;height: 100%;
+  } */
+
+  .col-3 {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 3px;
+    /* padding: 10px 10px; */
+    /* display: inline; */
+    color: #fff;
+    -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+    transition: all 0ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+    /* border: 6px solid black; */
+  
+  }
+
+  .col-3:hover {
+    cursor: pointer;
+  
+  }
+
+  .bg_wood {
+    background: url('../images/wood-ramka11.jpg');
+    background-size: cover;
+    height: 100px;width: 100px;
+    display: flex;align-items: center;justify-content: center;
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px black;
+  }
+  .game_body {
+    display: flex;align-items: center;justify-content: end;
+    position: absolute;top: 50%;left: 50%;
+    width: 700px;height: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .prefrence_button {
+    width: 100px;height: 100px;
+  }
+
+  .game_body_right {
+    margin-top: 115px;
+  }
+
+  .prefrence_button_icon {
+    color: rgb(134, 132, 132);
+    text-shadow: 0px 0px 5px black;
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s ease;
+  }
+  .prefrence_button_icon:hover {
+    color: rgb(73, 72, 73);
+    cursor: pointer;
+  }
+
+/* *********************************************************GAME LIDERS*********************************** */
+
+
+  .game_liders {
+    width: 100%;
+    height: 100%;
+  }
+
+  .game_liders_wrapper {
+    position: relative;
+    width: 100%;height: 100%;
+    display: flex;justify-content: center;align-items: center;
+  }
+
+  .game_liders_wrapper .bg_wood {
+    position: absolute;
+    top: 10px;left: 10%;
+}
+
+  .game_liders_card {
+    position: relative;
+    /* background: #ccc; */
+    height: 100%;
+    width: 700px;
+    /* display: flex;align-items: center;justify-content: center; */
+  }
+  .game_liders_card > img {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+  }
+
+  .game_lider_item{
+    color: #fff;
+    text-shadow: 0px 0px 5px black;
+    font-size: 40px;
+  }
+  .game_lider_item >span {
+    width: 100px;
+    /* background: #000; */
+  }
+
+  .game_lider_item_1 {
+    position: absolute;
+    top: 15%;left: 30%;
+  }
+  .game_lider_item_1 > span {
+    padding-left: 70px;
+  }
+
+  .game_lider_item_2 {
+    position: absolute;
+    top: 26%;left: 30%;
+  }
+  .game_lider_item_2 > span {
+    padding-left: 75px;
+  }
+  .game_lider_item_3 {
+    position: absolute;
+    top: 37%;left: 30%;
+  }
+  .game_lider_item_3 > span {
+    padding-left: 35px;
+  }
+  .game_lider_item_4 {
+    position: absolute;
+    top: 49%;left: 30%;
+  }
+  .game_lider_item_4 > span {
+    padding-left: 95px;
+  }
+  .game_lider_item_5 {
+    position: absolute;
+    top: 66%;left: 30%;
+  }
+  .game_lider_item_5 > span {
+    padding-left: 95px;
+  }

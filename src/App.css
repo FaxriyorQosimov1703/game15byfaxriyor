@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+
+
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wood_wrapper {
+  position: relative;
+  width: 100%;
+  height: 609px;
+  background: url('./images/bg_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  display: flex;align-items: center;justify-content: center;
+}
+.details > img {
+  width: 300px;height: 300px;
+  animation-name: salom;
+  animation-duration: 10s;
+  animation-timing-function:steps(10000);
+  animation-iteration-count: infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wood_wrapper > video {
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .bg_transparent {
+   background: transparent;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .details {
+   position: absolute;
+   background: transparent;
+   width: 28%;
+   top: 50%;left: 50%;
+   transform: translate(-50%, -50%);
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ .details_card {
+   width: 100%;height: 100%;
+   position: relative;
+ }
+
+ .details_box {
+   position: absolute;
+   top: 0;
+   cursor: pointer;
+   color: #fff;
+   text-shadow: 0 0 5px black;
+ }
+ .details_box_1 {
+   top: 5%;left: 34%;
+ }
+ .details_box_2 {
+  top: 25%;left: 22%;
 }
+.details_box_3 {
+  top: 47%;left: 39%;
+}
+.details_box_4 {
+  top: 69%;left: 26%;
+}
+ .details_box img {
+   width: 100%;height: 100%;
+   transform: translateX(10px);
+ }
+ .details_box > h1 {
+   position: absolute;
+   top: 0;left:40%;
+
+ }

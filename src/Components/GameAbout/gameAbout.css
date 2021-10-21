@@ -1,0 +1,53 @@
+.game_about {
+    width: 100%;
+    height: 100%;
+    /* background: url('../../images/wood_well1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+.game_about_wrapper {
+    position: relative;
+    width: 100%;height: 100%;
+    display: flex;justify-content: center;align-items: center;
+}
+.game_about_wrapper  .bg_wood {
+    position: absolute;
+    top: 10px;left: 10%;
+}
+.game_about_card {
+    position: relative;
+    height: 100%;
+    width: 700px;
+    /* background: #ccc; */
+}
+.game_about_card > img {
+    width: 100%;
+}
+.game_about_card_wrapper {
+    position: absolute;
+    top: 45%;left: 15%;
+    /* background: #ccc; */
+    width: 500px;height: 300px;
+    overflow-y: scroll;
+}
+
+.game_about_card_wrapper_content {
+    padding: 5px;
+}
+.game_about_card_wrapper_content > p {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0px 0px 5px black;
+    line-height: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.game_about_card_wrapper_content > h1 {
+    color: #fff;
+    text-shadow: 0px 0px 5px black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.game_about_card_wrapper_content > img {
+    margin-bottom: 30px;
+}
