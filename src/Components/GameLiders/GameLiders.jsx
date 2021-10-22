@@ -22,7 +22,7 @@ function GameLiders() {
         <div className="game_liders">
            <div className="game_liders_wrapper">
            <Link to='/'>
-              <div className="bg_wood lider_back_button prefrence_button mb-2">
+              <div className="bg_wood prefrence_button mb-2">
                 <FaArrowCircleLeft className="prefrence_button_icon" />
               </div>
             </Link>
