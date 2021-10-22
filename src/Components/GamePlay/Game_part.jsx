@@ -1,13 +1,14 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom'
 import {FaHome} from 'react-icons/fa';
-import MusicControls from './MusicControls';
-import RandomOrder from './RandomOrder';
+import MusicControls from '../MusicControls';
+import RandomOrder from '../RandomOrder';
 import GameCount from './GameCount';
-import HeaderTwoButton from './HeaderTwoButton';
+import HeaderTwoButton from '../HeaderTwoButton';
 import axios from 'axios'
-import '../App.css';
-import './gameStyle.css'
+import '../../App.css';
+import '../gameStyle.css';
+import './gamePlay.css'
 
 
 function Game_part() {
@@ -34,7 +35,8 @@ function Game_part() {
     localStorage.setItem('randoms', JSON.stringify(res))
   }
   getNonRepeatingRand(1,15,15)
-  let orderNumber1 = orderNumber === null ? [5,15,1,4,11,7,12,2,6,10,13,3,8,14,9] : orderNumber
+  // [5,15,1,4,11,7,12,2,6,10,13,3,8,14,9]
+  let orderNumber1 = orderNumber === null ? [1,2,3,4,5,6,7,8,9,10,12,15,13,14,11] : orderNumber
   const [number, setNumber] = useState([
     {id:1, title:  orderNumber1[0]},
     {id:2, title:  orderNumber1[1]},

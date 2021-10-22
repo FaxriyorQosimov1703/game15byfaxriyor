@@ -27,31 +27,25 @@ function Details() {
 
                 </div>
             </Modal>
-            {/* <img style={{width: '100px', height: '100px'}} src="../images/maymun.png" alt="" /> */}
             <div className="details_card">
                 <img src="../../images/home_wood2-removebg-preview.png" alt="" />
                 <Link to="/game" style={{textUnderline: 'none'}}>
                     <div className="details_box details_box_1">
-                        {/* <img src="../images/wood-ramka8.jpg" alt="" /> */}
                         <h1>PLAY</h1>
-                        
                     </div>
                 </Link>
                 <Link to='/liders'>
                     <div className="details_box details_box_2">
-                        {/* <img src="../images/wood-ramka8.jpg" alt="" /> */}
                         <h1>LIDERS</h1>
                     </div>
                 </Link>
                 <Link to="/about">
                     <div onClick={()=>setIsOpen(true)} className="details_box details_box_3">
-                        {/* <img src="../images/wood-ramka8.jpg" alt="" /> */}
                         <h1>ABOUT</h1>
                     </div>
                 </Link>
                 
                     <div onClick={()=>setIsOpen(true)} className="details_box details_box_4">
-                        {/* <img src="../images/wood-ramka8.jpg" alt="" /> */}
                         <h1>EXIT</h1>
                     </div>
                 

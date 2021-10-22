@@ -51,3 +51,77 @@
 .game_about_card_wrapper_content > img {
     margin-bottom: 30px;
 }
+
+@media screen and (min-width: 567px) and (max-width: 900px) {
+    .about_back_button {
+        width: 80px;
+        height: 80px;
+    }
+    .game_about_card {
+        width: 560px;
+    }
+    .game_about_card > img {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .game_about_card_wrapper {
+        width: 406px;
+        top: 45%;
+        height: 256px;
+    }
+
+    .game_about_card_wrapper_content > p {
+        font-size: 18px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 567px) {
+    .game_about_card {
+        width: 300px;
+    }
+    .game_about_card > img {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .game_about_card_wrapper {
+        width: 210px;top: 35%;
+        height: 130px;
+    }
+    /* .bg_wood {
+        height: 60px;
+        width: 60px;
+    } */
+    .game_about_card_wrapper_content > p {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 300px)  {
+    .game_about_card {
+        width: 200px;
+    }
+    .game_about_card > img {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .game_about_card_wrapper {
+        width: 142px;
+        top: 29%;
+        height: 90px;
+    }
+    /* .bg_wood {
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+    } */
+    .game_about_card_wrapper_content > p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .game_about_card_wrapper_content > h1 {
+        font-size: 20px;
+    }
+
+}

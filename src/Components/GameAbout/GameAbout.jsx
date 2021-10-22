@@ -9,7 +9,7 @@ function GameAbout() {
         <div className="game_about">
             <div className="game_about_wrapper">
             <Link to='/'>
-              <div className="bg_wood prefrence_button mb-2">
+              <div className="bg_wood about_back_button prefrence_button mb-2">
                 <FaArrowCircleLeft className="prefrence_button_icon" />
               </div>
             </Link>

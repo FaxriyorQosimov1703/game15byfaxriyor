@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {FaHome, FaArrowCircleLeft} from 'react-icons/fa';
-import axios from 'axios'
+import axios from 'axios';
+
+import './gameLiders.css'
 function GameLiders() {
     const [a, Sa] = useState([]);
     const [b, Sb] = useState([])
@@ -20,12 +22,12 @@ function GameLiders() {
         <div className="game_liders">
            <div className="game_liders_wrapper">
            <Link to='/'>
-              <div className="bg_wood prefrence_button mb-2">
+              <div className="bg_wood lider_back_button prefrence_button mb-2">
                 <FaArrowCircleLeft className="prefrence_button_icon" />
               </div>
             </Link>
                <div className="game_liders_card">
-                <img src="../../images/liders_wood1-remove.png" alt="" />
+                <img src="../../../images/liders_wood1-remove.png" alt="" />
                     <h1 className="game_lider_item game_lider_item_1">Admiral <span >{ b[0] ? b[0] : 0}</span></h1>
                     <h1 className="game_lider_item game_lider_item_2">General <span>{ b[1] ? b[1] : 0}</span> </h1>
                     <h1 className="game_lider_item game_lider_item_3">Leytenant <span>{ b[2] ? b[2] : 0}</span> </h1>

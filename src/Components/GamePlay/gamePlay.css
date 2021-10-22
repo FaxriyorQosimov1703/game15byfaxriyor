@@ -1,0 +1,183 @@
+.game_parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Game_wrapper {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  height: 455px;
+  width: 455px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  /* background-color: #ccc; */
+  padding: 30px;
+  /* width: 36%; */
+}
+.Game_wrapper > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.game_count {
+  position: absolute;
+  top: 54.9%;
+  left: 47.4%;
+  transform: translate(-50%, -50%);
+  /* display: flex;justify-content: space-around;align-items: center; */
+  width: 390px;
+  height: 100%;
+  /* background: #ccc; */
+}
+.game_count .row {
+  position: absolute;
+}
+
+.col-3 {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 3px;
+  /* padding: 10px 10px; */
+  /* display: inline; */
+  color: #fff;
+  -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+  transition: all 0ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+  /* border: 6px solid black; */
+}
+
+.col-3:hover {
+  cursor: pointer;
+}
+
+.bg_wood {
+  background: url("../../images/wood-ramka11.jpg");
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px black;
+}
+.game_body {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.prefrence_button {
+  width: 100px;
+  height: 100px;
+}
+
+.game_body_right {
+  margin-top: 115px;
+}
+
+.prefrence_button_icon {
+  color: rgb(134, 132, 132);
+  text-shadow: 0px 0px 5px black;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s ease;
+}
+.prefrence_button_icon:hover {
+  color: rgb(73, 72, 73);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 300px) and (max-width: 567px) {
+    .Game_wrapper {
+        width: 310px;height: 310px;
+    }
+    .game_body {
+        width: 310px;height: 310px;
+        display: block;
+        flex-direction: column;
+        margin-top: -60px;
+    }
+    .bg_wood {
+        width: 67px;height: 67px;
+        font-size: 30px;
+    }
+    .game_count {
+        position: absolute;
+        left: 46%;
+        width: 255px;
+    }
+    .game_body_right {
+        margin-top: 350px;
+        display: flex;justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 299px)  {
+    .Game_wrapper {
+        width: 200px;height: 200px;
+    }
+    .game_body {
+        width: 200px;height: 200px;
+        display: block;
+        flex-direction: column;
+        margin-top: -100px;
+    }
+    .bg_wood {
+        width: 42px;height: 42px;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    .game_count {
+        position: absolute;
+        left: 44.5%;
+        width: 158px;
+        margin-top: 1px;
+    }
+    .game_body_right {
+        margin-top: 240px;
+        display: flex;justify-content: space-around;
+    }
+    .col-3 {
+        margin-bottom: 3px;
+    }
+    .prefrence_button {
+        width: 50px;
+        height: 50px;
+    }
+    .prefrence_button_icon {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media screen and (min-width: 567px) and (max-width: 900px) {
+    .game_body {
+        flex-direction: column;
+        width: 500px;
+        height: 100%;
+        display: block;
+        margin-top: -80px;
+    }
+    .game_body_right {
+        margin-top: 650px;
+        display: flex;justify-content: space-around;
+    }
+}

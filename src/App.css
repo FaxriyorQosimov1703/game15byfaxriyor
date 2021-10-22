@@ -3,7 +3,9 @@
 *{
   margin: 0;padding: 0;box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+  width: 0;
+}
 .wood_wrapper {
   position: relative;
   width: 100%;
@@ -11,6 +13,7 @@
   background: url('./images/bg_forest.jpg');
   overflow: hidden;
   background-size: cover;
+  background-position: center;
   display: flex;align-items: center;justify-content: center;
 }
 .details > img {
@@ -35,7 +38,7 @@
  .details {
    position: absolute;
    background: transparent;
-   width: 28%;
+   width: 330px;
    top: 50%;left: 50%;
    transform: translate(-50%, -50%);
  }
@@ -53,16 +56,16 @@
    text-shadow: 0 0 5px black;
  }
  .details_box_1 {
-   top: 5%;left: 34%;
+   top: 5%;left: 45%;
  }
  .details_box_2 {
-  top: 25%;left: 22%;
+  top: 25%;left: 25%;
 }
 .details_box_3 {
-  top: 47%;left: 39%;
+  top: 47%;left: 45%;
 }
 .details_box_4 {
-  top: 69%;left: 26%;
+  top: 69%;left: 34%;
 }
  .details_box img {
    width: 100%;height: 100%;
@@ -72,4 +75,79 @@
    position: absolute;
    top: 0;left:40%;
 
+ }
+
+ @media screen and (min-width: 300px) and (max-width: 567px) {
+  .details_card {
+    position: relative;
+    width: 320px;
+  }
+  .details_card img {
+    width: 80%;height: 100%;
+    transform: translateX(60px);
+  }
+  .details_box h1 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  .details_box_1 {
+    top: 7%;left: 45%;
+  }
+  .details_box_2 {
+   top: 27%;left: 36%;
+ }
+ .details_box_3 {
+   top: 49%;left: 50%;
+ }
+ .details_box_4 {
+   top: 71%;left: 40%;
+ }
+ }
+
+
+ @media screen and (min-width: 567px) and (max-width: 900px) {
+   .wood_wrapper {
+     height: 700px;
+   }
+  .details_box_1 {
+    top: 7%;left: 45%;
+  }
+  .details_box_2 {
+   top: 27%;left: 36%;
+ }
+ .details_box_3 {
+   top: 49%;left: 50%;
+ }
+ .details_box_4 {
+   top: 71%;left: 40%;
+ }
+ }
+
+ @media screen and (max-width: 299px) {
+   .details {
+     width: 90%;
+   }
+  .details_card {
+    position: relative;
+    width: 90%;
+  }
+ .details_card img {
+   width: 100%;
+   transform: translateX(20px);
+ }
+ .details_box h1 {
+  font-size: 16px;
+  }
+  .details_box_1 {
+    top: 7%;left: 45%;
+  }
+  .details_box_2 {
+  top: 27%;left: 36%;
+  }
+  .details_box_3 {
+  top: 49%;left: 50%;
+  }
+  .details_box_4 {
+  top: 71%;left: 40%;
+  }
  }

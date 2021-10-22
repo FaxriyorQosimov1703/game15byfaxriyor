@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-
+import './gamePlay.css'
 function GameCount({number, setNumber, setNumberOfClicks, setIsRunning}) {
     const addClickNumber = (item1) => {
         // setIsRunning(true)
