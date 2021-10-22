@@ -5,7 +5,9 @@
   width: 100%;
   height: 100%;
 }
-
+.row {
+  margin: 0;
+}
 .Game_wrapper {
   position: absolute;
   top: 59%;
@@ -32,16 +34,16 @@
 .game_count {
   position: absolute;
   top: 54.9%;
-  left: 47.4%;
+  left: 50%;
   transform: translate(-50%, -50%);
   /* display: flex;justify-content: space-around;align-items: center; */
-  width: 390px;
+  width: 414px;
   height: 100%;
   /* background: #ccc; */
 }
-.game_count .row {
+/* .game_count .row {
   position: absolute;
-}
+} */
 
 .col-3 {
   position: relative;
@@ -120,8 +122,8 @@
     }
     .game_count {
         position: absolute;
-        left: 46%;
-        width: 255px;
+        left: 50%;
+        width: 280px;
     }
     .game_body_right {
         margin-top: 350px;
@@ -146,8 +148,8 @@
     }
     .game_count {
         position: absolute;
-        left: 44.5%;
-        width: 158px;
+        left: 50%;
+        width: 180px;
         margin-top: 1px;
     }
     .game_body_right {

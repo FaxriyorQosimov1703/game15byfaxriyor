@@ -44,10 +44,10 @@ function GameCount({number, setNumber, setNumberOfClicks, setIsRunning}) {
         }
     return (
         <div className="game_count">
-        <div className="row d-flex aka">
+        <div className="row d-flex" style={{margin: '0'}}>
           {
             number.map((item, index) => 
-            <div className="col-3" >
+            <div className="col-3" style={{padding: '0'}} >
               <div className={`${item.title == '' ? 'bg_transparent' : 'bg_dark bg_wood'}`} onClick={() => addClickNumber(item)}>
                 {item.title}
               </div>
