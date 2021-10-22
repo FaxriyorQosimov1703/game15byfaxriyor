@@ -170,6 +170,9 @@
   .game_lider_item_3 > span {
     padding-left: 12px;
   }
+  .salom {
+    padding: 1px;
+  }
   .game_lider_item_4 {
     position: absolute;
     top: 43.9%;left: 34%;
