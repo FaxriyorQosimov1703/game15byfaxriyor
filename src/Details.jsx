@@ -1,6 +1,7 @@
-import React,{useRef, useState} from 'react'
+import React,{useRef, useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import {Modal} from 'reactstrap';
+// import db from './Firebase/config'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
@@ -13,6 +14,13 @@ const useStyles = makeStyles((theme) => ({
 function Details() {
     const [isOpen, setIsOpen] = useState(false)
     const classes = useStyles();
+    const [port, setPort] = useState([])
+    // useEffect(()=>{
+    //   db.collection('wood').onSnapshot((snapshot) => 
+    //   setPort(snapshot.docs.map((doc) => doc.data()))
+    //   )
+    // },[])
+    console.log( port[0]);
     return (
         <div className='details'>
             <Modal isOpen={isOpen} >

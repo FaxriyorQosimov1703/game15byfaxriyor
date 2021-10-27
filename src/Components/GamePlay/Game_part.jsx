@@ -6,6 +6,10 @@ import RandomOrder from '../RandomOrder';
 import GameCount from './GameCount';
 import HeaderTwoButton from '../HeaderTwoButton';
 import axios from 'axios'
+import { collection, addDoc} from 'firebase/firestore'
+import {db} from '../../Firebase/config';
+
+
 import '../../App.css';
 import '../gameStyle.css';
 import './gamePlay.css'
@@ -18,6 +22,13 @@ function Game_part() {
   const [minut, setMinut] = useState(0)
   const [isRunning, setIsRunning] = useState(false);
   
+  const usersCollectionRef = collection(db, "liders")
+
+
+
+
+
+
   function rand(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -55,6 +66,9 @@ function Game_part() {
       {id:15, title: orderNumber1[14]},
       {id:16, title: ''}
     ])
+
+  useEffect(()=>{
+    // alert('salom')
   if(number[0].title == 1 && 
     number[1].title == 2 &&
     number[2].title == 3 &&
@@ -80,8 +94,12 @@ function Game_part() {
       }).then(res => {
         console.log(res.data);
       })
+
+      addDoc(usersCollectionRef, {numberClick: numberOfClicks})
       
     }
+  },[numberOfClicks])
+
 
 
   if(secund === 59){
@@ -107,7 +125,9 @@ useEffect(()=>{
       return () => clearInterval(i)
     // }
   },[])
-
+ function addClickBack() {
+   alert('salom')
+ }
     return (
       <div className="game_parent">
 
@@ -119,6 +139,7 @@ useEffect(()=>{
         
         <div className="game_body">
           {/* <video width="100%" height="100%" src="../../images/confetti.gif" controls></video> */}
+         
           <div className="Game_wrapper">
             <img src="../../images/wood-ramka11_nobg1.jpg" alt="" />
             <GameCount 
@@ -134,6 +155,9 @@ useEffect(()=>{
                 <FaHome className="prefrence_button_icon" />
               </div>
             </Link>
+            <div className="bg_wood prefrence_button mb-2" onClick={addClickBack}>
+                <div className="prefrence_button_icon" > b </div>
+              </div>
               <MusicControls  />
               <RandomOrder
                 setOrderNumber={setOrderNumber}

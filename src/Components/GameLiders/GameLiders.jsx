@@ -2,21 +2,30 @@ import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {FaHome, FaArrowCircleLeft} from 'react-icons/fa';
 import axios from 'axios';
+import {db} from '../../Firebase/config';
+import { collection, getDocs} from 'firebase/firestore'
+
 
 import './gameLiders.css'
 function GameLiders() {
-    const [a, Sa] = useState([]);
-    const [b, Sb] = useState([])
-    
-    a.map(item => item.id % 2 == 0 && b.push(item.numberClick))
-    console.log( b.sort((a, b)=> {return a-b}));
 
-    a ? console.log( a ) : console.log('hayr');
+    const [topLider, setTopLider] = useState([]);
+    const [liders, setLiders] = useState([]);
+
+    liders.map(item => item && topLider.push(item.numberClick))
+
+    const usersCollectionRef = collection(db, "liders")
     useEffect(()=>{
-        axios.get('http://localhost:5000/numbers').then(res => {
-            Sa(res.data)
-        })
+        const getLiders = async () => {
+            const data = await getDocs(usersCollectionRef)
+            setLiders(data.docs.map(doc => ({...doc.data(), id: doc.id})))
+        }
+        getLiders()
+        topLider.sort((ai, bi)=> {return ai-bi})
     },[])
+
+    
+    topLider.sort((a, b)=> {return a-b})
 
     return (
         <div className="game_liders">
@@ -28,12 +37,11 @@ function GameLiders() {
             </Link>
                <div className="game_liders_card">
                 <img src="../../../images/liders_wood1-remove.png" alt="" />
-                    <h1 className="game_lider_item game_lider_item_1">Admiral <span >{ b[0] ? b[0] : 0}</span></h1>
-                    <h1 className="game_lider_item game_lider_item_2">General <span>{ b[1] ? b[1] : 0}</span> </h1>
-                    <h1 className="game_lider_item game_lider_item_3">Leytenant <span>{ b[2] ? b[2] : 0}</span> </h1>
-                    <h1 className="game_lider_item game_lider_item_4">Mayor <span>{ b[3] ? b[3] : 0}</span> </h1>
-                    <h1 className="game_lider_item game_lider_item_5">Soldat <span>{ b[4] ? b[4] : 0}</span> </h1>
-
+                    <h1 className="game_lider_item game_lider_item_1">Admiral <span >{ topLider[0] ? topLider[0] : 0}</span></h1>
+                    <h1 className="game_lider_item game_lider_item_2">General <span>{ topLider[1] ? topLider[1] : 0}</span> </h1>
+                    <h1 className="game_lider_item game_lider_item_3">Leytenant <span>{ topLider[2] ? topLider[2] : 0}</span> </h1>
+                    <h1 className="game_lider_item game_lider_item_4">Mayor <span>{ topLider[3] ? topLider[3] : 0}</span> </h1>
+                    <h1 className="game_lider_item game_lider_item_5">Soldat <span>{ topLider[4] ? topLider[4] : 0}</span> </h1>
                </div>
            </div>
         </div>
