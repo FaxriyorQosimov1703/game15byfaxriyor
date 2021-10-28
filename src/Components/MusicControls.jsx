@@ -22,7 +22,7 @@ function MusicControls() {
       setPlayerPause(prev=>!prev)
   }
   const [volum, setVolum] = useState(0.5)
-
+console.log('salom');
   useEffect (()=>{
     setVolume(volum);
 }, [volum])
