@@ -1,6 +1,7 @@
 import React from 'react'
 
 function HeaderTwoButton({secund, minut, numberOfClicks}) {
+
     return (
         <>
             <div className="count_item">

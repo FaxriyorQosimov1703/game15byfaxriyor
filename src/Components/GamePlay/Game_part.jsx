@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom'
-import {FaHome} from 'react-icons/fa';
+import {FaHome, FaCrown} from 'react-icons/fa';
 import MusicControls from '../MusicControls';
 import RandomOrder from '../RandomOrder';
 import GameCount from './GameCount';
@@ -21,7 +21,8 @@ function Game_part() {
   const [secund, setSecund] = useState(0)
   const [minut, setMinut] = useState(0)
   const [isRunning, setIsRunning] = useState(false);
-  
+  const [timeInterval, setTimeInterval] = useState('')
+  console.log(timeInterval);
   const usersCollectionRef = collection(db, "liders")
 
 
@@ -87,6 +88,7 @@ function Game_part() {
     number[15].title == ''
     
     ){
+      clearInterval(timeInterval)
       // setIsRunning(false)
       localStorage.setItem('numbers', JSON.stringify(number))
       axios.post('http://localhost:5000/numbers',{
@@ -122,12 +124,10 @@ useEffect(()=>{
         }
       }, 1000)
 
-      return () => clearInterval(i)
+       setTimeInterval(i)
     // }
   },[])
- function addClickBack() {
-   alert('salom')
- }
+
     return (
       <div className="game_parent">
 
@@ -155,8 +155,10 @@ useEffect(()=>{
                 <FaHome className="prefrence_button_icon" />
               </div>
             </Link>
-            <div className="bg_wood prefrence_button mb-2" onClick={addClickBack}>
-                <div className="prefrence_button_icon" > b </div>
+            <div className="bg_wood prefrence_button mb-2">
+                <Link to="/liders" >
+                  <FaCrown className="prefrence_button_icon" />
+                </Link>
               </div>
               <MusicControls  />
               <RandomOrder

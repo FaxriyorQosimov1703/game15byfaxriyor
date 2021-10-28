@@ -12,13 +12,13 @@ function MusicControls() {
     }
 
     const toggle = () => {
-      setvisibleMicrophone(prev => !prev)
-      setDur(audio.current.duration);
-      if(playerPause){
-          audio.current.play();
-      }else {
-          audio.current.pause();
-      }
+        setDur(audio.current.duration);
+        if(visibleMicrofone){
+            audio.current.play();
+        }else {
+            audio.current.pause();
+        }
+        setvisibleMicrophone(prev => !prev)
       setPlayerPause(prev=>!prev)
   }
   const [volum, setVolum] = useState(0.5)
@@ -32,7 +32,7 @@ function MusicControls() {
                 onCanPlay={(e)=>setDur(e.target.duration)}
                 onCanPlay={(e)=>setDur(e.target.duration)}
                 ref={audio}
-                autoPlay={true}
+                autoPlay={false}
                 width="100%"
                 height="60px"
                 preload={'auto'}
